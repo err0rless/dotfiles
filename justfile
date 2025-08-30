@@ -93,11 +93,6 @@ copy-configs:
     cp -r nvim ~/.config/
     cp .zshrc .gitconfig .tmux.conf ~/
 
-# Clean up installation files
-clean:
-    @echo "🧹 Cleaning up..."
-    rm -f nvim-*.tar.gz
-
 # Update all tools
 update:
     @echo "🔄 Updating tools..."
