@@ -50,3 +50,12 @@ Before committing changes, verify:
 - `./setup.sh` runs without errors
 - `just --list` shows all recipes
 - `just --dry-run setup` completes without errors
+
+## Commit Message Format
+
+Use conventional commits: `<type>(<scope>): <description>`
+
+**Examples:**
+- `feat(setup.sh): add shellcheck installation`
+- `fix(justfile): correct macOS attribute syntax`
+- `docs(README): update installation instructions`
