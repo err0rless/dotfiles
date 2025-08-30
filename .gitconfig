@@ -5,11 +5,26 @@
     diffFilter = delta --color-only
 
 [delta]
-    navigate = true  # use n and N to move between diff sections
-    dark = true      # or light = true, or omit for auto-detection
+    navigate = true
+    dark = true
     line-numbers = true
     hyperlinks = true
     true-color = always
+    # Color scheme
+    minus-style = "syntax #3f2d2d"
+    minus-non-emph-style = "syntax #3f2d2d"
+    minus-emph-style = "syntax #614a4a"
+    plus-style = "syntax #2d3f2f"
+    plus-non-emph-style = "syntax #2d3f2f"
+    plus-emph-style = "syntax #4a6741"
+    line-numbers-minus-style = "#ff9999"
+    line-numbers-plus-style = "#99cc99"
+    file-style = "#a8a8a8 bold"
+    file-decoration-style = "#4a5568 ul"
+    hunk-header-decoration-style = "#4a5568 box"
+    hunk-header-file-style = "#a8a8a8"
+    hunk-header-line-number-style = "#4a5568"
+    hunk-header-style = "file line-number syntax"
 
 [merge]
     conflictStyle = zdiff3
