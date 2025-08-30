@@ -48,4 +48,6 @@ fi
 
 echo ""
 echo "Bootstrap complete!"
-echo "Now run: just setup"
+echo ""
+echo "Running just setup..."
+just setup

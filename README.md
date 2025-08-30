@@ -1,21 +1,14 @@
 # Dotfiles
-
-> This repository was created with assistance from [Claude Code](https://claude.ai/code)
-
 Personal development environment configuration files and setup scripts.
 
 ## Quick Start
-
 ```bash
 # Clone this repo
 git clone <your-repo-url> ~/.dotfiles
 cd ~/.dotfiles
 
-# Bootstrap (installs Rust and just)
+# setup
 ./setup.sh
-
-# Full setup
-just setup
 ```
 
 ## What's Included
@@ -48,16 +41,9 @@ just setup
 ```bash
 just --list              # Show all available recipes
 just setup               # Full installation (recommended)
-just install-packages    # System packages only
-just install-rust-tools  # Rust CLI tools only
-just install-neovim      # Neovim binary installation
-just copy-configs        # Copy config files only
-just clean               # Remove installation artifacts
-just update              # Update all tools
 ```
 
 ## Configuration Files
-
 - `nvim/` - Neovim configuration with lazy.nvim
 - `.zshrc` - Zsh shell configuration
 - `.gitconfig` - Git configuration
