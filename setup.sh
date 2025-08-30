@@ -13,6 +13,16 @@ else
     echo "Rust already installed ✓"
 fi
 
+# Install build tools if needed
+if ! command -v gcc &> /dev/null; then
+    echo "Installing build tools..."
+    if command -v apt-get &> /dev/null; then
+        sudo apt-get install -y build-essential
+    elif command -v brew &> /dev/null; then
+        xcode-select --install 2>/dev/null || echo "Build tools already available"
+    fi
+fi
+
 # Install just
 if ! command -v just &> /dev/null; then
     echo "Installing just..."
