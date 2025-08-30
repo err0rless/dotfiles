@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "🚀 Dotfiles Bootstrap Script"
+echo "Dotfiles Bootstrap Script"
 echo "Installing Rust and just command runner..."
 
 # Install Rust
@@ -10,7 +10,7 @@ if ! command -v cargo &> /dev/null; then
     # shellcheck source=/dev/null
     source "$HOME/.cargo/env"
 else
-    echo "Rust already installed ✓"
+    echo "Rust already installed"
 fi
 
 # Install build tools if needed
@@ -28,7 +28,7 @@ if ! command -v just &> /dev/null; then
     echo "Installing just..."
     cargo install just
 else
-    echo "just already installed ✓"
+    echo "just already installed"
 fi
 
 # Install shellcheck
@@ -39,13 +39,13 @@ if ! command -v shellcheck &> /dev/null; then
     elif command -v brew &> /dev/null; then
         brew install shellcheck
     else
-        echo "⚠️  Could not install shellcheck - unsupported package manager"
+        echo "Could not install shellcheck - unsupported package manager"
         echo "Please install shellcheck manually for your system"
     fi
 else
-    echo "shellcheck already installed ✓"
+    echo "shellcheck already installed"
 fi
 
 echo ""
-echo "✅ Bootstrap complete!"
+echo "Bootstrap complete!"
 echo "Now run: just setup"

@@ -1,10 +1,10 @@
-# 🏠 Dotfiles
+# Dotfiles
 
-> 🤖 This repository was created with assistance from [Claude Code](https://claude.ai/code)
+> This repository was created with assistance from [Claude Code](https://claude.ai/code)
 
 Personal development environment configuration files and setup scripts.
 
-## ⚡ Quick Start
+## Quick Start
 
 ```bash
 # Clone this repo
@@ -18,7 +18,7 @@ cd ~/.dotfiles
 just setup
 ```
 
-## 📦 What's Included
+## What's Included
 
 ### Core Tools
 - **Neovim** - Modern text editor with full configuration
@@ -43,7 +43,7 @@ just setup
 - **Python 3** - With pip package manager
 - **Rust toolchain** - Modern systems programming
 
-## 🎯 Available Commands
+## Available Commands
 
 ```bash
 just --list              # Show all available recipes
@@ -56,14 +56,14 @@ just clean               # Remove installation artifacts
 just update              # Update all tools
 ```
 
-## 📁 Configuration Files
+## Configuration Files
 
 - `nvim/` - Neovim configuration with lazy.nvim
 - `.zshrc` - Zsh shell configuration
 - `.gitconfig` - Git configuration
 - `.tmux.conf` - tmux configuration
 
-## 🔧 Customization
+## Customization
 
 ### Adding New Tools
 Add new recipes to the `justfile`:
@@ -81,11 +81,11 @@ install-your-tool:
 3. Or create symlinks for live editing
 
 ### OS Support
-- ✅ **Linux/Ubuntu** - Full support with apt
-- ✅ **macOS** - Full support with Homebrew
-- ❌ **Windows** - Not currently supported
+- **Linux/Ubuntu** - Full support with apt
+- **macOS** - Full support with Homebrew
+- **Windows** - Not currently supported
 
-## 🚀 Post-Installation
+## Post-Installation
 
 ```bash
 # Restart shell or source config
@@ -103,7 +103,7 @@ git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 ```
 
-## 🛠️ Manual Steps
+## Manual Steps
 
 Some tools may require additional setup:
 - SSH keys configuration
@@ -111,7 +111,7 @@ Some tools may require additional setup:
 - Cloud service authentications
 - IDE-specific extensions
 
-## 📚 Documentation
+## Documentation
 
 - [Neovim Config](./nvim/README.md)
 - [tmux Guide](https://github.com/tmux/tmux/wiki)
