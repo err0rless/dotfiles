@@ -87,10 +87,21 @@ install-your-tool:
 
 ## 🚀 Post-Installation
 
-1. **Restart your shell** or run `source ~/.zshrc`
-2. **Configure tmux**: Press `prefix + I` to install plugins
-3. **Setup Node.js**: `nvm install --lts && nvm use --lts`
-4. **Configure Git**: Update `.gitconfig` with your details
+```bash
+# Restart shell or source config
+source ~/.zshrc
+
+# Install tmux plugins (press prefix + I in tmux)
+tmux
+
+# Setup Node.js
+nvm install --lts
+nvm use --lts
+
+# Configure Git with your details
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+```
 
 ## 🛠️ Manual Steps
 
@@ -105,11 +116,3 @@ Some tools may require additional setup:
 - [Neovim Config](./nvim/README.md)
 - [tmux Guide](https://github.com/tmux/tmux/wiki)
 - [Oh My Zsh](https://ohmyz.sh/)
-
-## 🤝 Contributing
-
-Feel free to fork and customize for your own needs!
-
-## 📄 License
-
-MIT License - use however you'd like.
