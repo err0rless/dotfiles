@@ -96,5 +96,9 @@ copy-configs:
 # Update all tools
 update:
     @echo "Updating tools..."
+    @if ! command -v cargo-install-update >/dev/null 2>&1; then \
+        echo "Installing cargo-update..."; \
+        cargo install cargo-update; \
+    fi
     cargo install-update -a
     ~/.fzf/install --update-rc
