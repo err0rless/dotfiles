@@ -10,7 +10,7 @@ When making changes to code in this repository, always run the following command
 # For shell scripts
 shellcheck setup.sh
 
-# For justfile syntax
+# For Justfile syntax
 just --dry-run --list
 ```
 
@@ -19,7 +19,7 @@ If you encounter any linting or type checking errors, fix them before completing
 ## Repository Structure
 
 - `setup.sh` - Bootstrap script that installs Rust and just
-- `justfile` - Main installation recipes using just command runner
+- `Justfile` - Main installation recipes using just command runner
 - `nvim/` - Neovim configuration directory
 - `.zshrc`, `.gitconfig`, `.tmux.conf` - Configuration files
 - `README.md` - User-facing documentation
@@ -30,11 +30,11 @@ If you encounter any linting or type checking errors, fix them before completing
 When maintaining this repository:
 
 1. Always test changes on both Linux and macOS where possible
-2. **Use attributes instead of shell conditionals**: Prefer `[linux]`, `[macos]`, `[unix]`, `[windows]` attributes over if statements in justfile recipes
+2. **Use attributes instead of shell conditionals**: Prefer `[linux]`, `[macos]`, `[unix]`, `[windows]` attributes over if statements in Justfile recipes
 3. **Avoid shell-dependent operations**: Use just's built-in functionality and attributes rather than shell scripting where possible
 4. Keep the README.md updated when adding new tools or recipes
 5. Ensure all installation scripts are idempotent (safe to run multiple times)
-6. Add new CLI tools to the appropriate recipe in the justfile
+6. Add new CLI tools to the appropriate recipe in the Justfile
 
 ## Justfile Best Practices
 
@@ -57,5 +57,5 @@ Use conventional commits: `<type>(<scope>): <description>`
 
 **Examples:**
 - `feat(setup.sh): add shellcheck installation`
-- `fix(justfile): correct macOS attribute syntax`
+- `fix(Justfile): correct macOS attribute syntax`
 - `docs(README): update installation instructions`

@@ -52,7 +52,7 @@ just setup               # Full installation (recommended)
 ## Customization
 
 ### Adding New Tools
-Add new recipes to the `justfile`:
+Add new recipes to the `Justfile`:
 
 ```just
 # Install your-tool
