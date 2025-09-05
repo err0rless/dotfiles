@@ -4,7 +4,7 @@ Personal development environment configuration files and setup scripts.
 ## Quick Start
 ```bash
 # Clone this repo
-git clone <your-repo-url> ~/.dotfiles
+git clone https://github.com/err0rless/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 
 # setup
