@@ -51,13 +51,18 @@ just setup               # Full installation (recommended)
 
 ## Customization
 
-### Work Environment Presets
-For work-specific configurations, you can create additional preset files that are automatically imported:
+### Environment Presets
+For environment-specific configurations, you can create additional preset files that are automatically imported:
 
-- **Zsh**: Create `~/.oh-my-zsh/work.zsh` for work-specific aliases, exports, and functions
-- **Git**: Create `~/.gitconfig.work` for work-specific user config, remotes, and settings
+**Zsh presets:**
+- `~/.oh-my-zsh/personal.zsh` - Personal aliases, exports, and functions
+- `~/.oh-my-zsh/work.zsh` - Work-specific configuration
 
-These files are conditionally loaded if they exist, allowing you to keep personal and work configurations separate.
+**Git presets:**
+- `~/.gitconfig.personal` - Personal user config, aliases, and settings
+- `~/.gitconfig.work` - Work-specific user config, remotes, and settings
+
+These files are conditionally loaded if they exist, allowing you to keep different environment configurations separate and modular.
 
 ### Adding New Tools
 Add new recipes to the `Justfile`:

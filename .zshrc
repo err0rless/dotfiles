@@ -12,6 +12,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# extra personal configuration
+[ -f $ZSH/personal.zsh ] && source $ZSH/personal.zsh
+
 # preset for work environment
 [ -f $ZSH/work.zsh ] && source $ZSH/work.zsh
 
