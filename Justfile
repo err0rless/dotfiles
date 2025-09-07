@@ -1,5 +1,8 @@
 # Dotfiles setup and management
 
+# Repository root directory
+ROOT_DIR := justfile_directory()
+
 # Show available recipes
 default:
     @just --list
@@ -92,6 +95,16 @@ copy-configs:
     @echo "Copying configuration files..."
     cp -r nvim ~/.config/
     cp .zshrc .gitconfig .tmux.conf ~/
+
+# Create symlinks for configuration files (alternative to copy-configs)
+link-configs:
+    @echo "Creating symlinks for configuration files..."
+    mkdir -p ~/.config
+    ln -s {{ROOT_DIR}}/nvim ~/.config/nvim
+    ln -s {{ROOT_DIR}}/.zshrc ~/.zshrc
+    ln -s {{ROOT_DIR}}/.gitconfig ~/.gitconfig
+    ln -s {{ROOT_DIR}}/.tmux.conf ~/.tmux.conf
+    @echo "Symlinks created. Changes will sync automatically."
 
 # Update all tools
 update:
