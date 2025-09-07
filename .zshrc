@@ -12,6 +12,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# preset for work environment
+[ -f $ZSH/work.zsh ] && source $ZSH/work.zsh
+
 # PATH
 export PATH=$PATH:~/bin/
 export PATH=$PATH:$HOME/.cargo/bin
