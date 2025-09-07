@@ -8,7 +8,7 @@ default:
     @just --list
 
 # Full setup - installs everything
-setup: install-packages install-neovim install-tmux install-rust-tools install-nvm install-claude install-zsh copy-configs
+setup: install-packages install-neovim install-tmux install-rust-tools install-nvm install-claude install-zsh link-configs
     @echo "Dotfiles setup complete!"
 
 # Install system packages (Linux)
