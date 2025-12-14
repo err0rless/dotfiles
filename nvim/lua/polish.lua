@@ -1,18 +1,17 @@
-if true then return end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- This will run last in the setup process and is a good place to configure
 -- things like custom filetypes. This just pure lua so anything that doesn't
 -- fit in the normal config locations above can go here
 
--- Set up custom filetypes
-vim.filetype.add {
-  extension = {
-    foo = "fooscript",
-  },
-  filename = {
-    ["Foofile"] = "fooscript",
-  },
-  pattern = {
-    ["~/%.config/foo/.*"] = "fooscript",
-  },
-}
+-- Make comments italic while preserving original colors
+vim.api.nvim_create_autocmd("ColorScheme", {
+  callback = function()
+    local comment_hl = vim.api.nvim_get_hl(0, { name = "Comment" })
+    comment_hl.italic = true
+    vim.api.nvim_set_hl(0, "Comment", comment_hl)
+  end,
+})
+
+-- Apply to current colorscheme as well
+local comment_hl = vim.api.nvim_get_hl(0, { name = "Comment" })
+comment_hl.italic = true
+vim.api.nvim_set_hl(0, "Comment", comment_hl)
