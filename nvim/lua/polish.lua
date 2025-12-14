@@ -37,3 +37,17 @@ vim.api.nvim_create_autocmd("FocusLost", {
   end,
 })
 
+-- LSP hover and diagnostic float border
+vim.diagnostic.config({
+  float = { border = "rounded" },
+})
+
+-- Override K keymap for hover with border
+vim.keymap.set("n", "K", function()
+  vim.lsp.buf.hover({ border = "rounded" })
+end, { desc = "LSP Hover" })
+
+vim.keymap.set("n", "<C-k>", function()
+  vim.lsp.buf.signature_help({ border = "rounded" })
+end, { desc = "LSP Signature Help" })
+
