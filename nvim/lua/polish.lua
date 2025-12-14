@@ -20,6 +20,10 @@ vim.api.nvim_set_hl(0, "Comment", comment_hl)
 -- Copilot suggestion color (light pink)
 vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#d4a5b9", italic = true, bold = true })
 
+-- Remove background color from error/warning messages (text color only)
+vim.api.nvim_set_hl(0, "ErrorMsg", { fg = "#fb4934", bg = "NONE" })
+vim.api.nvim_set_hl(0, "WarningMsg", { fg = "#fabd2f", bg = "NONE" })
+
 -- Change background color based on tmux pane focus
 vim.api.nvim_create_autocmd("FocusGained", {
   callback = function()
