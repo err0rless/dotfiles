@@ -19,3 +19,17 @@ vim.api.nvim_set_hl(0, "Comment", comment_hl)
 
 -- Copilot suggestion color (light pink)
 vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#d4a5b9", italic = true, bold = true })
+
+-- Change background color based on tmux pane focus
+vim.api.nvim_create_autocmd("FocusGained", {
+  callback = function()
+    vim.api.nvim_set_hl(0, "Normal", { bg = "#282828" }) -- gruvbox medium bg
+  end,
+})
+
+vim.api.nvim_create_autocmd("FocusLost", {
+  callback = function()
+    vim.api.nvim_set_hl(0, "Normal", { bg = "#3c3836" }) -- gruvbox bg1 (lighter gray)
+  end,
+})
+
