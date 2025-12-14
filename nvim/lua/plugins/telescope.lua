@@ -2,12 +2,9 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     opts = {
-      defaults = {
-        layout_strategy = "ivy",
-        layout_config = {
-          height = 0.5,
-        },
-      },
+      defaults = require("telescope.themes").get_ivy({
+        layout_config = { height = 0.5 },
+      }),
     },
   },
   {
