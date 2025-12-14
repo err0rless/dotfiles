@@ -8,6 +8,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     local comment_hl = vim.api.nvim_get_hl(0, { name = "Comment" })
     comment_hl.italic = true
     vim.api.nvim_set_hl(0, "Comment", comment_hl)
+    vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#d4a5b9", italic = true })
   end,
 })
 
@@ -15,3 +16,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 local comment_hl = vim.api.nvim_get_hl(0, { name = "Comment" })
 comment_hl.italic = true
 vim.api.nvim_set_hl(0, "Comment", comment_hl)
+
+-- Copilot suggestion color (light pink)
+vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#d4a5b9", italic = true })
