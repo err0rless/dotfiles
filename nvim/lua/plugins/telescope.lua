@@ -2,9 +2,49 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     opts = {
-      defaults = require("telescope.themes").get_ivy({
-        layout_config = { height = 0.5 },
-      }),
+      defaults = {
+        layout_strategy = "horizontal",
+        layout_config = {
+          horizontal = {
+            prompt_position = "top",
+            preview_width = 0.55,
+          },
+          width = 0.87,
+          height = 0.80,
+        },
+        sorting_strategy = "ascending",
+        prompt_prefix = "  \u{f002}  ",
+        winblend = 0,
+      },
+    },
+  },
+  {
+    "AstroNvim/astroui",
+    opts = {
+      highlights = {
+        init = function()
+          local get_hlgroup = require("astroui").get_hlgroup
+          local normal = get_hlgroup("Normal")
+          local bg = normal.bg
+          local prompt_bg = get_hlgroup("CursorLine").bg or get_hlgroup("Visual").bg
+          local darker_bg = get_hlgroup("NormalFloat").bg or get_hlgroup("Pmenu").bg or bg
+          return {
+            TelescopeBorder = { fg = darker_bg, bg = darker_bg },
+            TelescopeNormal = { bg = darker_bg },
+            TelescopePreviewBorder = { fg = darker_bg, bg = darker_bg },
+            TelescopePreviewNormal = { bg = darker_bg },
+            TelescopePreviewTitle = { fg = darker_bg, bg = darker_bg },
+            TelescopeResultsBorder = { fg = darker_bg, bg = darker_bg },
+            TelescopeResultsNormal = { bg = darker_bg },
+            TelescopeResultsTitle = { fg = darker_bg, bg = darker_bg },
+            TelescopePromptBorder = { fg = prompt_bg, bg = prompt_bg },
+            TelescopePromptNormal = { fg = normal.fg, bg = prompt_bg },
+            TelescopePromptPrefix = { fg = "#FFB6C1", bg = prompt_bg, bold = true },
+            TelescopePromptTitle = { fg = prompt_bg, bg = prompt_bg },
+            TelescopePromptCounter = { fg = normal.fg, bg = prompt_bg, bold = true },
+          }
+        end,
+      },
     },
   },
   {
