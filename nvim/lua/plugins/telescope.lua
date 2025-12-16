@@ -28,6 +28,9 @@ return {
           local bg = normal.bg
           local prompt_bg = get_hlgroup("CursorLine").bg or get_hlgroup("Visual").bg
           local darker_bg = get_hlgroup("NormalFloat").bg or get_hlgroup("Pmenu").bg or bg
+          local gruvbox_orange = get_hlgroup("GruvboxOrange") or { fg = "#fe8019" }
+          local gruvbox_yellow = get_hlgroup("GruvboxYellow") or { fg = "#fabd2f" }
+
           return {
             TelescopeBorder = { fg = darker_bg, bg = darker_bg },
             TelescopeNormal = { bg = darker_bg },
@@ -42,6 +45,8 @@ return {
             TelescopePromptPrefix = { fg = "#FFB6C1", bg = prompt_bg, bold = true },
             TelescopePromptTitle = { fg = prompt_bg, bg = prompt_bg },
             TelescopePromptCounter = { fg = normal.fg, bg = prompt_bg, bold = true },
+            TelescopeMatching = { fg = gruvbox_orange.fg, bold = true },
+            TelescopeSelection = { bg = get_hlgroup("CursorLine").bg, bold = true },
           }
         end,
       },
