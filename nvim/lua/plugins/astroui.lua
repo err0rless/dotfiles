@@ -23,13 +23,14 @@ return {
       gruvbox = function()
         local get_hlgroup = require("astroui").get_hlgroup
         local green_bold = get_hlgroup("GruvboxGreenBold")
+        local blue_bold = get_hlgroup("GruvboxBlueBold")
 
         return {
           -- Fix status bar fg/bg issue in gruvbox
           StatusLine = { fg = get_hlgroup("Normal").fg, bg = get_hlgroup("StatusLine").bg },
           -- Add italic to C++ method calls and properties
           ["@lsp.type.method.cpp"] = vim.tbl_extend("force", green_bold, { italic = true }),
-          ["@lsp.type.property.cpp"] = vim.tbl_extend("force", green_bold, { italic = true }),
+          ["@lsp.type.property.cpp"] = vim.tbl_extend("force", blue_bold, { italic = true }),
         }
       end,
     },
